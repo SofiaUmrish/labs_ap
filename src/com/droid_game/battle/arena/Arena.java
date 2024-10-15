@@ -121,28 +121,28 @@ public class Arena {
             choice=choice_2;
         }
 
-            switch (choice) {
-                case 1: {
-                    System.out.println("\n Обрано місце бою 'Ліс'.\n");
-                    return new Arena.Forest();
-                }
-                case 2: {
-                    System.out.println("\n Обрано місце бою 'Водоспад'.\n");
-                    return new Arena.Waterfall();
-                }
-                case 3: {
-                    System.out.println("\n Обрано місце бою 'Пустеля'.\n");
-                    return new Arena.Desert();
-                }
-                case 4: {
-                    System.out.println("\n Обрано місце бою 'Лабіринт'.\n");
-                    return new Arena.Labyrinth();
-                }
-
-                default:
-                    System.out.println("\nОбрано місце бою 'Ліс' за замовчуванням.\n");
-                    return new Arena.Forest();
+        switch (choice) {
+            case 1: {
+                System.out.println("\n Обрано місце бою 'Ліс'.\n");
+                return new Arena.Forest();
             }
+            case 2: {
+                System.out.println("\n Обрано місце бою 'Водоспад'.\n");
+                return new Arena.Waterfall();
+            }
+            case 3: {
+                System.out.println("\n Обрано місце бою 'Пустеля'.\n");
+                return new Arena.Desert();
+            }
+            case 4: {
+                System.out.println("\n Обрано місце бою 'Лабіринт'.\n");
+                return new Arena.Labyrinth();
+            }
+
+            default:
+                System.out.println("\nОбрано місце бою 'Ліс' за замовчуванням.\n");
+                return new Arena.Forest();
+        }
 
     }
 }

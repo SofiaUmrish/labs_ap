@@ -2,26 +2,50 @@ package com.droid_game.battle;
 
 import com.droid_game.battle.arena.Arena;
 import com.droid_game.droids.Droid;
+import com.droid_game.record_battle.RecordBattle;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class TeamBattle {
-    private Droid[] droid_team1;
-    private Droid[] droid_team2;
+    private Droid[] team1;
+    private Droid[] team2;
     private Arena arena;
+    private RecordBattle logger; // Об'єкт для логування
+    private StringBuilder battleLogBuffer; // Буфер для логів
+    private boolean loggingEnabled; // Чи увімкнено логування
 
-    // Конструктор для ініціалізації дроїдів
-    public TeamBattle(Droid[] droid_team1, Droid[] droid_team2, Arena arena) {
-        this.droid_team1 = droid_team1;
-        this.droid_team2 = droid_team2;
+    // Конструктор
+    public TeamBattle(Droid[] team1, Droid[] team2, Arena arena, boolean loggingEnabled) throws IOException {
+        this.team1 = team1;
+        this.team2 = team2;
         this.arena = arena;
+        System.out.println("\nЗмінені характеристики дроїдів відповідно до місця битви: ");
+        modifyDroid_team(team1);
+        modifyDroid_team(team2);
 
-        // Модифікація ушкодження та здоров'я дроїдів один раз
-        modifyDroid_team(droid_team1);
-        modifyDroid_team(droid_team2);
+        this.loggingEnabled = loggingEnabled;//прапорець
+        battleLogBuffer = new StringBuilder();
+        battleLogBuffer.append("Командний бій між командами:\n");
+        appendTeamToLog("Команда 1", team1);
+        appendTeamToLog("Команда 2", team2);
+        battleLogBuffer.append("На арені ").append(arena.getName()).append("\n");
+    }
+
+    private void appendTeamToLog(String teamName, Droid[] team) {
+        battleLogBuffer.append(teamName).append(": ");
+        for (int i = 0; i < team.length; i++) {
+            battleLogBuffer.append(team[i].getName());
+            if (i < team.length - 1) {
+                battleLogBuffer.append(", ");
+            }
+        }
+        battleLogBuffer.append("\n");
     }
 
     // Метод для модифікації здоров'я та ушкоджень дроїдів
     private void modifyDroid_team(Droid[] team) {
-        System.out.println("Змінені характеристики дроїдів відповідно до місця битви: \n");
         for (int i = 0; i < team.length; i++) {
             Droid droid = team[i];
             droid.setDamage(arena.modifyDamage(droid.getDamage()));
@@ -33,65 +57,47 @@ public class TeamBattle {
 
     // Метод для запуску командного бою
     public void startTeamBattle() {
-        System.out.println("\nКомандний бій розпочато!\n");
+        logAndPrint("\nКомандний бій розпочато на арені: " + arena.getName() + "\n");
 
-        // Цикл бою, поки обидві команди мають живих дроїдів
-        while (hasAliveDroids(droid_team1) && hasAliveDroids(droid_team2)) {
-            // Вибір дроїдів для атаки
-            Droid droid1 = selectDroid(droid_team1);
-            Droid droid2 = selectDroid(droid_team2);
-
-            if (droid1 == null || droid2 == null) {
-                break; // Якщо немає живих дроїдів, виходимо з бою
+        // Приклад простої логіки бою
+        while (areTeamsAlive()) {
+            for (Droid attacker : team1) {
+                Droid defender = selectRandomDefender(team2);
+                if (defender != null) {
+                    attack(attacker, defender);
+                    if (!defender.isAlive()) {
+                        logAndPrint(defender.getName() + " з команди 2 зазнала поразки.\n");
+                        break;
+                    }
+                }
             }
 
-            // Атака першого дроїда
-            attack(droid1, droid2);
-            if (!droid2.isAlive()) {
-                System.out.println(droid2.getName() + " зазнав поразки :(\n");
-                continue; // Продовжити, якщо другий дроїд знищений
-            }
-
-            // Атака другого дроїда, якщо він ще живий
-            if (hasAliveDroids(droid_team2)) {
-                attack(droid2, droid1);
-                if (!droid1.isAlive()) {
-                    System.out.println(droid1.getName() + " зазнав поразки :(\n");
+            for (Droid attacker : team2) {
+                Droid defender = selectRandomDefender(team1);
+                if (defender != null) {
+                    attack(attacker, defender);
+                    if (!defender.isAlive()) {
+                        logAndPrint(defender.getName() + " з команди 1 зазнала поразки.\n");
+                        break;
+                    }
                 }
             }
         }
 
         // Оголошення переможця
-        if (hasAliveDroids(droid_team1)) {
-            System.out.println("Команда 1 виграла бій :)\n");
+        if (areTeamAlive(team1)) {
+            logAndPrint("Команда 1 виграла бій :)\n");
         } else {
-            System.out.println("Команда 2 виграла бій :)\n");
+            logAndPrint("Команда 2 виграла бій :)\n");
         }
     }
-    // Метод для вибору живого дроїда з команди (з найменшим здоров'ям)
-    private Droid selectDroid(Droid[] team) {
-        Droid droidWithLowestHealth = null;
 
-        for (int i = 0; i < team.length; i++) {
-            Droid droid = team[i];
-            if (droid.isAlive()) {
-                if (droidWithLowestHealth == null || droid.getHealth() < droidWithLowestHealth.getHealth()) {
-                    droidWithLowestHealth = droid;
-                }
-            }
-        }
-        return droidWithLowestHealth;
+    private boolean areTeamsAlive() {
+        return areTeamAlive(team1) && areTeamAlive(team2);
     }
-    // Метод для атаки одного дроїда на іншого
-    private void attack(Droid attacker, Droid defender) {
-        System.out.println(attacker.getName() + " атакує " + defender.getName() + " із рівнем ушкодження " + attacker.getDamage());
-        defender.takeDamage(attacker.getDamage());
-        System.out.println(" Рівень здоров'я для " + defender.getName() + " : " + defender.getHealth() + "\n");
-    }
-    // Метод для перевірки, чи є живі дроїди в команді
-    private boolean hasAliveDroids(Droid[] team) {
-        for (int i = 0; i < team.length; i++) {
-            Droid droid = team[i];
+
+    private boolean areTeamAlive(Droid[] team) {
+        for (Droid droid : team) {
             if (droid.isAlive()) {
                 return true;
             }
@@ -99,4 +105,65 @@ public class TeamBattle {
         return false;
     }
 
+    private Droid selectRandomDefender(Droid[] team) {
+        // Простий вибір першого живого дроїда
+        for (Droid droid : team) {
+            if (droid.isAlive()) {
+                return droid;
+            }
+        }
+        return null;
+    }
+
+    private void attack(Droid attacker, Droid defender) {
+        String attackMessage = attacker.getName() + " атакує " + defender.getName() + " із рівнем ушкодження " + attacker.getDamage();
+        defender.takeDamage(attacker.getDamage());
+        String healthMessage = "Рівень здоров'я для " + defender.getName() + ": " + defender.getHealth() + "\n";
+
+        // Виведення в консоль та запис у лог
+        logAndPrint(attackMessage);
+        logAndPrint(healthMessage);
+    }
+
+    // Метод для виведення в консоль і запису в лог
+    private void logAndPrint(String message) {
+        System.out.println(message); // Виведення в консоль
+        battleLogBuffer.append(message).append("\n"); // Запис у буфер
+        if (loggingEnabled && logger != null) { // Якщо логування увімкнено, записуємо до файлу
+            try {
+                logger.log(message);
+            } catch (IOException e) {
+                System.out.println("Помилка при записі логів у файл: " + e.getMessage());
+            }
+        }
+    }
+
+    // Метод для отримання журналу бою
+    public String getBattleLog() {
+        return battleLogBuffer.toString();
+    }
+
+    // Статичний метод для читання логів з файлу
+    public static void readBattleLog(String logFilePath) {
+        try (BufferedReader br = new BufferedReader(new FileReader(logFilePath))) {
+            String line;
+            // Читаємо кожен рядок з файлу і виводимо на консоль
+            while ((line = br.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            System.out.println("Помилка при читанні файлу: " + e.getMessage());
+        }
+    }
+
+    // Метод для закриття логера
+    public void closeLogger() {
+        if (logger != null) {
+            try {
+                logger.close();
+            } catch (IOException e) {
+                System.out.println("Помилка закриття логера: " + e.getMessage());
+            }
+        }
+    }
 }

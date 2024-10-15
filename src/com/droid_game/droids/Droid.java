@@ -114,32 +114,31 @@ public abstract class Droid {
 
 
 
-            System.out.print("Введіть номер дроїда: ");
+        System.out.print("Введіть номер дроїда: ");
 
-            int choice = scanner.nextInt();
-            switch (choice) {
-                case 1: {
-                    return new BloomDroid();
-                }
-                case 2: {
-                    return new StellaDroid();
-                }
-                case 3: {
-                    return new MuseDroid();
-                }
-                case 4: {
-                    return new FloraDroid();
-                }
-                case 5: {
-                    return new LeylaDroid();
-                }
-                case 6: {
-                    return new DarcyDroid();
-                }
-                default:
-                    System.out.println("Невірний вибір. Обрано BloomDroid за замовчуванням.");
-                    return new BloomDroid();
+        int choice = scanner.nextInt();
+        switch (choice) {
+            case 1: {
+                return new BloomDroid();
             }
+            case 2: {
+                return new StellaDroid();
+            }
+            case 3: {
+                return new MuseDroid();
+            }
+            case 4: {
+                return new FloraDroid();
+            }
+            case 5: {
+                return new LeylaDroid();
+            }
+            case 6: {
+                return new DarcyDroid();
+            }
+            default:
+                System.out.println("Невірний вибір. Обрано BloomDroid за замовчуванням.");
+                return new BloomDroid();
+        }
     }
 }
-
