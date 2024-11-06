@@ -1,0 +1,5 @@
+Helmet,2.4,steel,356.0
+Lance,4.2,iron,281.0
+ArmorSuit,9.8,iron,999.0
+Shield,3.0,wood,188.0
+Sword,3.2,steel,333.0

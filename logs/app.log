@@ -1,0 +1,253 @@
+2024-11-05 20:28:18 [main] INFO  com.knight.performance.AddArmorCommand - Executing AddArmorCommand
+2024-11-05 20:31:13 [main] INFO  com.knight.performance.AddArmorCommand - Executing AddArmorCommand
+2024-11-05 20:40:45 [main] INFO  com.knight.performance.AddArmorCommand - Executing AddArmorCommand
+2024-11-05 20:57:59 [main] INFO  com.knight.performance.AddArmorCommand - Executing AddArmorCommand
+2024-11-05 20:58:02 [main] FATAL com.knight.performance.AddArmorCommand - Critical error: Non-numeric input entered instead of a number
+java.util.InputMismatchException: null
+	at java.util.Scanner.throwFor(Scanner.java:964) ~[?:?]
+	at java.util.Scanner.next(Scanner.java:1619) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2284) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2238) ~[?:?]
+	at com.knight.performance.AddArmorCommand.execute(Command.java:27) [classes/:?]
+	at com.knight.performance.Menu.run(Menu.java:54) [classes/:?]
+	at com.knight.performance.Main.main(Main.java:22) [classes/:?]
+2024-11-05 21:01:39 [main] INFO  com.knight.performance.AddArmorCommand - Executing AddArmorCommand
+2024-11-05 21:02:14 [main] INFO  com.knight.performance.AddArmorCommand - Armor added successfully
+2024-11-05 21:02:59 [main] INFO  com.knight.performance.AddArmorCommand - Executing AddArmorCommand
+2024-11-05 21:03:21 [main] INFO  com.knight.performance.AddArmorCommand - Armor added successfully
+2024-11-05 21:05:36 [main] INFO  com.knight.performance.AddArmorCommand - Executing AddArmorCommand
+2024-11-05 21:07:56 [main] INFO  com.knight.performance.AddArmorCommand - Executing AddArmorCommand
+2024-11-05 21:08:20 [main] INFO  com.knight.performance.AddArmorCommand - Executing AddArmorCommand
+2024-11-05 21:09:23 [main] INFO  com.knight.performance.AddArmorCommand - Executing AddArmorCommand
+2024-11-05 21:10:20 [main] INFO  com.knight.performance.AddArmorCommand - Executing AddArmorCommand
+2024-11-05 21:11:35 [main] INFO  com.knight.performance.AddArmorCommand - Executing AddArmorCommand
+2024-11-05 21:14:49 [main] INFO  com.knight.performance.AddArmorCommand - Executing AddArmorCommand
+2024-11-05 21:14:57 [main] FATAL com.knight.performance.AddArmorCommand - Critical error: Non-numeric input entered instead of a number
+java.util.InputMismatchException: null
+	at java.util.Scanner.throwFor(Scanner.java:964) ~[?:?]
+	at java.util.Scanner.next(Scanner.java:1619) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2284) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2238) ~[?:?]
+	at com.knight.performance.AddArmorCommand.execute(Command.java:27) [classes/:?]
+	at com.knight.performance.Menu.run(Menu.java:54) [classes/:?]
+	at com.knight.performance.Main.main(Main.java:22) [classes/:?]
+2024-11-05 21:15:02 [main] INFO  com.knight.performance.ShowArmoryCommand - Executing ShowArmoryCommand
+2024-11-05 21:15:02 [main] INFO  com.knight.performance.ShowArmoryCommand - Armory displayed successfully
+2024-11-05 21:15:04 [main] INFO  com.knight.performance.AddArmorCommand - Executing AddArmorCommand
+2024-11-05 21:38:44 [main] INFO  com.knight.performance.AddArmorCommand - Executing AddArmorCommand
+2024-11-05 21:41:44 [main] INFO  com.knight.performance.AddArmorCommand - Armor added successfully
+2024-11-05 21:44:09 [main] INFO  com.knight.performance.FindArmorByPriceCommand - Executing FindArmorByPriceCommand
+2024-11-05 21:44:18 [main] INFO  com.knight.performance.FindArmorByPriceCommand - Armor found by price range successfully
+2024-11-05 21:44:42 [main] INFO  com.knight.performance.CalculateTotalPriceCommand - Executing CalculateTotalPriceCommand
+2024-11-05 21:44:42 [main] INFO  com.knight.performance.CalculateTotalPriceCommand - Total price calculated successfully
+2024-11-05 21:45:00 [main] INFO  com.knight.performance.SortArmorByWeightCommand - Executing SortArmorByWeightCommand
+2024-11-05 21:45:00 [main] INFO  com.knight.performance.SortArmorByWeightCommand - Armor sorted by weight
+2024-11-05 21:45:37 [main] INFO  com.knight.performance.RemoveArmorByNameAndPriceCommand - Executing RemoveArmorByNameAndPriceCommand
+2024-11-05 21:46:23 [main] INFO  com.knight.performance.RemoveArmorByNameAndPriceCommand - Armor removed successfully
+2024-11-05 21:46:38 [main] INFO  com.knight.performance.SaveArmoryToFileCommand - Executing SaveArmoryToFileCommand
+2024-11-05 21:46:38 [main] INFO  com.knight.performance.SaveArmoryToFileCommand - Armory saved to file successfully
+2024-11-05 21:46:54 [main] INFO  com.knight.performance.ShowArmoryCommand - Executing ShowArmoryCommand
+2024-11-05 21:46:54 [main] INFO  com.knight.performance.ShowArmoryCommand - Armory displayed successfully
+2024-11-05 21:47:07 [main] INFO  com.knight.performance.LoadArmoryFromFileCommand - Executing LoadArmoryFromFileCommand
+2024-11-05 21:47:07 [main] INFO  com.knight.performance.LoadArmoryFromFileCommand - Armory loaded from file successfully
+2024-11-05 21:47:11 [main] INFO  com.knight.performance.ShowArmoryCommand - Executing ShowArmoryCommand
+2024-11-05 21:47:11 [main] INFO  com.knight.performance.ShowArmoryCommand - Armory displayed successfully
+2024-11-05 21:47:34 [main] INFO  com.knight.performance.ExitCommand - Executing ExitCommand
+2024-11-05 21:49:54 [main] INFO  com.knight.performance.AddArmorCommand - Executing AddArmorCommand
+2024-11-05 21:55:30 [main] INFO  com.knight.performance.AddArmorCommand - Executing AddArmorCommand
+2024-11-05 21:56:26 [main] INFO  com.knight.performance.AddArmorCommand - Armor added successfully
+2024-11-05 21:56:39 [main] INFO  com.knight.performance.ExitCommand - Executing ExitCommand
+2024-11-05 22:05:28 [main] INFO  com.knight.performance.AddArmorCommand - Executing AddArmorCommand
+2024-11-05 22:05:31 [main] FATAL com.knight.performance.AddArmorCommand - Critical error: Non-numeric input entered instead of a number
+java.util.InputMismatchException: null
+	at java.util.Scanner.throwFor(Scanner.java:964) ~[?:?]
+	at java.util.Scanner.next(Scanner.java:1619) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2284) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2238) ~[?:?]
+	at com.knight.performance.AddArmorCommand.execute(Command.java:27) [classes/:?]
+	at com.knight.performance.Menu.run(Menu.java:54) [classes/:?]
+	at com.knight.performance.Main.main(Main.java:22) [classes/:?]
+2024-11-05 22:06:34 [main] INFO  com.knight.performance.SortArmorByWeightCommand - Executing SortArmorByWeightCommand
+2024-11-05 22:06:34 [main] INFO  com.knight.performance.SortArmorByWeightCommand - Armor sorted by weight
+2024-11-05 22:07:45 [main] INFO  com.knight.performance.CalculateTotalPriceCommand - Executing CalculateTotalPriceCommand
+2024-11-05 22:07:45 [main] INFO  com.knight.performance.CalculateTotalPriceCommand - Total price calculated successfully
+2024-11-05 22:08:10 [main] INFO  com.knight.performance.FindArmorByPriceCommand - Executing FindArmorByPriceCommand
+2024-11-05 22:08:34 [main] FATAL com.knight.performance.FindArmorByPriceCommand - Critical error while sorting armor by weight
+java.util.InputMismatchException: null
+	at java.util.Scanner.throwFor(Scanner.java:964) ~[?:?]
+	at java.util.Scanner.next(Scanner.java:1619) ~[?:?]
+	at java.util.Scanner.nextDouble(Scanner.java:2590) ~[?:?]
+	at com.knight.armor_actions.AactionsOnArmor.findArmorByPrice(AactionsOnArmor.java:117) ~[classes/:?]
+	at com.knight.performance.FindArmorByPriceCommand.execute(Command.java:156) [classes/:?]
+	at com.knight.performance.Menu.run(Menu.java:54) [classes/:?]
+	at com.knight.performance.Main.main(Main.java:22) [classes/:?]
+2024-11-05 22:09:15 [main] INFO  com.knight.performance.RemoveArmorByNameAndPriceCommand - Executing RemoveArmorByNameAndPriceCommand
+2024-11-05 22:09:24 [main] FATAL com.knight.performance.RemoveArmorByNameAndPriceCommand - Critical error while sorting armor by weight
+java.util.InputMismatchException: null
+	at java.util.Scanner.throwFor(Scanner.java:964) ~[?:?]
+	at java.util.Scanner.next(Scanner.java:1619) ~[?:?]
+	at java.util.Scanner.nextDouble(Scanner.java:2590) ~[?:?]
+	at com.knight.armor_actions.AactionsOnArmor.removeArmorByNameAndPrice(AactionsOnArmor.java:185) ~[classes/:?]
+	at com.knight.performance.RemoveArmorByNameAndPriceCommand.execute(Command.java:179) [classes/:?]
+	at com.knight.performance.Menu.run(Menu.java:54) [classes/:?]
+	at com.knight.performance.Main.main(Main.java:22) [classes/:?]
+2024-11-05 22:09:49 [main] INFO  com.knight.performance.ExitCommand - Executing ExitCommand
+2024-11-05 22:12:10 [main] INFO  com.knight.performance.AddArmorCommand - Executing AddArmorCommand
+2024-11-05 22:12:17 [main] FATAL com.knight.performance.AddArmorCommand - Critical error: Non-numeric input entered instead of a number
+java.util.InputMismatchException: null
+	at java.util.Scanner.throwFor(Scanner.java:964) ~[?:?]
+	at java.util.Scanner.next(Scanner.java:1619) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2284) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2238) ~[?:?]
+	at com.knight.performance.AddArmorCommand.execute(Command.java:27) [classes/:?]
+	at com.knight.performance.Menu.run(Menu.java:54) [classes/:?]
+	at com.knight.performance.Main.main(Main.java:22) [classes/:?]
+2024-11-05 22:12:54 [main] INFO  com.knight.performance.SortArmorByWeightCommand - Executing SortArmorByWeightCommand
+2024-11-05 22:12:54 [main] INFO  com.knight.performance.SortArmorByWeightCommand - Armor sorted by weight
+2024-11-05 22:13:29 [main] INFO  com.knight.performance.FindArmorByPriceCommand - Executing FindArmorByPriceCommand
+2024-11-05 22:13:32 [main] FATAL com.knight.performance.FindArmorByPriceCommand - Critical error while sorting armor by weight
+java.util.InputMismatchException: null
+	at java.util.Scanner.throwFor(Scanner.java:964) ~[?:?]
+	at java.util.Scanner.next(Scanner.java:1619) ~[?:?]
+	at java.util.Scanner.nextDouble(Scanner.java:2590) ~[?:?]
+	at com.knight.armor_actions.AactionsOnArmor.findArmorByPrice(AactionsOnArmor.java:117) ~[classes/:?]
+	at com.knight.performance.FindArmorByPriceCommand.execute(Command.java:156) [classes/:?]
+	at com.knight.performance.Menu.run(Menu.java:54) [classes/:?]
+	at com.knight.performance.Main.main(Main.java:22) [classes/:?]
+2024-11-05 22:13:42 [main] INFO  com.knight.performance.RemoveArmorByNameAndPriceCommand - Executing RemoveArmorByNameAndPriceCommand
+2024-11-05 22:13:49 [main] FATAL com.knight.performance.RemoveArmorByNameAndPriceCommand - Critical error while sorting armor by weight
+java.util.InputMismatchException: null
+	at java.util.Scanner.throwFor(Scanner.java:964) ~[?:?]
+	at java.util.Scanner.next(Scanner.java:1619) ~[?:?]
+	at java.util.Scanner.nextDouble(Scanner.java:2590) ~[?:?]
+	at com.knight.armor_actions.AactionsOnArmor.removeArmorByNameAndPrice(AactionsOnArmor.java:185) ~[classes/:?]
+	at com.knight.performance.RemoveArmorByNameAndPriceCommand.execute(Command.java:179) [classes/:?]
+	at com.knight.performance.Menu.run(Menu.java:54) [classes/:?]
+	at com.knight.performance.Main.main(Main.java:22) [classes/:?]
+2024-11-05 22:13:52 [main] INFO  com.knight.performance.ExitCommand - Executing ExitCommand
+2024-11-05 22:19:31 [main] INFO  com.knight.performance.AddArmorCommand - Executing AddArmorCommand
+2024-11-05 22:19:34 [main] FATAL com.knight.performance.AddArmorCommand - Critical error: Non-numeric input entered instead of a number
+java.util.InputMismatchException: null
+	at java.util.Scanner.throwFor(Scanner.java:964) ~[?:?]
+	at java.util.Scanner.next(Scanner.java:1619) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2284) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2238) ~[?:?]
+	at com.knight.performance.AddArmorCommand.execute(Command.java:27) [classes/:?]
+	at com.knight.performance.Menu.run(Menu.java:54) [classes/:?]
+	at com.knight.performance.Main.main(Main.java:22) [classes/:?]
+2024-11-05 22:20:18 [main] INFO  com.knight.performance.ExitCommand - Executing ExitCommand
+2024-11-05 22:21:47 [main] INFO  com.knight.performance.AddArmorCommand - Executing AddArmorCommand
+2024-11-05 22:21:51 [main] FATAL com.knight.performance.AddArmorCommand - Critical error: Non-numeric input entered instead of a number
+java.util.InputMismatchException: null
+	at java.util.Scanner.throwFor(Scanner.java:964) ~[?:?]
+	at java.util.Scanner.next(Scanner.java:1619) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2284) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2238) ~[?:?]
+	at com.knight.performance.AddArmorCommand.execute(Command.java:27) [classes/:?]
+	at com.knight.performance.Menu.run(Menu.java:54) [classes/:?]
+	at com.knight.performance.Main.main(Main.java:22) [classes/:?]
+2024-11-05 22:22:03 [main] INFO  com.knight.performance.ExitCommand - Executing ExitCommand
+2024-11-06 10:44:01 [main] INFO  com.knight.performance.AddArmorCommand - Executing AddArmorCommand
+2024-11-06 10:44:02 [main] FATAL com.knight.performance.AddArmorCommand - Critical error: Non-numeric input entered instead of a number
+java.util.InputMismatchException: null
+	at java.util.Scanner.throwFor(Scanner.java:964) ~[?:?]
+	at java.util.Scanner.next(Scanner.java:1619) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2284) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2238) ~[?:?]
+	at com.knight.performance.AddArmorCommand.execute(Command.java:27) [classes/:?]
+	at com.knight.performance.Menu.run(Menu.java:54) [classes/:?]
+	at com.knight.performance.Main.main(Main.java:22) [classes/:?]
+2024-11-06 10:44:09 [main] INFO  com.knight.performance.ExitCommand - Executing ExitCommand
+2024-11-06 10:51:07 [main] INFO  com.knight.performance.AddArmorCommand - Executing AddArmorCommand
+2024-11-06 10:51:09 [main] FATAL com.knight.performance.AddArmorCommand - Critical error: Non-numeric input entered instead of a number
+java.util.InputMismatchException: null
+	at java.util.Scanner.throwFor(Scanner.java:964) ~[?:?]
+	at java.util.Scanner.next(Scanner.java:1619) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2284) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2238) ~[?:?]
+	at com.knight.performance.AddArmorCommand.execute(Command.java:27) [classes/:?]
+	at com.knight.performance.Menu.run(Menu.java:54) [classes/:?]
+	at com.knight.performance.Main.main(Main.java:22) [classes/:?]
+2024-11-06 11:56:02 [main] INFO  com.knight.performance.AddArmorCommand - Executing AddArmorCommand
+2024-11-06 11:56:03 [main] FATAL com.knight.performance.AddArmorCommand - Critical error: Non-numeric input entered instead of a number
+java.util.InputMismatchException: null
+	at java.util.Scanner.throwFor(Scanner.java:964) ~[?:?]
+	at java.util.Scanner.next(Scanner.java:1619) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2284) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2238) ~[?:?]
+	at com.knight.performance.AddArmorCommand.execute(Command.java:27) [classes/:?]
+	at com.knight.performance.Menu.run(Menu.java:54) [classes/:?]
+	at com.knight.performance.Main.main(Main.java:22) [classes/:?]
+2024-11-06 11:56:07 [main] INFO  com.knight.performance.ExitCommand - Executing ExitCommand
+2024-11-06 11:58:05 [main] INFO  com.knight.performance.AddArmorCommand - Executing AddArmorCommand
+2024-11-06 11:58:07 [main] FATAL com.knight.performance.AddArmorCommand - Critical error: Non-numeric input entered instead of a number
+java.util.InputMismatchException: null
+	at java.util.Scanner.throwFor(Scanner.java:964) ~[?:?]
+	at java.util.Scanner.next(Scanner.java:1619) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2284) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2238) ~[?:?]
+	at com.knight.performance.AddArmorCommand.execute(Command.java:27) [classes/:?]
+	at com.knight.performance.Menu.run(Menu.java:54) [classes/:?]
+	at com.knight.performance.Main.main(Main.java:22) [classes/:?]
+2024-11-06 11:58:09 [main] INFO  com.knight.performance.ExitCommand - Executing ExitCommand
+2024-11-06 11:58:48 [main] INFO  com.knight.performance.AddArmorCommand - Executing AddArmorCommand
+2024-11-06 11:58:49 [main] FATAL com.knight.performance.AddArmorCommand - Critical error: Non-numeric input entered instead of a number
+java.util.InputMismatchException: null
+	at java.util.Scanner.throwFor(Scanner.java:964) ~[?:?]
+	at java.util.Scanner.next(Scanner.java:1619) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2284) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2238) ~[?:?]
+	at com.knight.performance.AddArmorCommand.execute(Command.java:27) [classes/:?]
+	at com.knight.performance.Menu.run(Menu.java:54) [classes/:?]
+	at com.knight.performance.Main.main(Main.java:22) [classes/:?]
+2024-11-06 12:01:36 [main] INFO  com.knight.performance.AddArmorCommand - Executing AddArmorCommand
+2024-11-06 12:01:37 [main] FATAL com.knight.performance.AddArmorCommand - Critical error: Non-numeric input entered instead of a number
+java.util.InputMismatchException: null
+	at java.util.Scanner.throwFor(Scanner.java:964) ~[?:?]
+	at java.util.Scanner.next(Scanner.java:1619) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2284) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2238) ~[?:?]
+	at com.knight.performance.AddArmorCommand.execute(Command.java:27) [classes/:?]
+	at com.knight.performance.Menu.run(Menu.java:54) [classes/:?]
+	at com.knight.performance.Main.main(Main.java:22) [classes/:?]
+2024-11-06 12:05:13 [main] INFO  com.knight.performance.AddArmorCommand - Executing AddArmorCommand
+2024-11-06 12:05:14 [main] FATAL com.knight.performance.AddArmorCommand - Critical error: Non-numeric input entered instead of a number
+java.util.InputMismatchException: null
+	at java.util.Scanner.throwFor(Scanner.java:964) ~[?:?]
+	at java.util.Scanner.next(Scanner.java:1619) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2284) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2238) ~[?:?]
+	at com.knight.performance.AddArmorCommand.execute(Command.java:27) [classes/:?]
+	at com.knight.performance.Menu.run(Menu.java:54) [classes/:?]
+	at com.knight.performance.Main.main(Main.java:22) [classes/:?]
+2024-11-06 12:05:17 [main] INFO  com.knight.performance.ExitCommand - Executing ExitCommand
+2024-11-06 12:14:21 [main] INFO  com.knight.performance.AddArmorCommand - Executing AddArmorCommand
+2024-11-06 12:14:22 [main] FATAL com.knight.performance.AddArmorCommand - Critical error: Non-numeric input entered instead of a number
+java.util.InputMismatchException: null
+	at java.util.Scanner.throwFor(Scanner.java:964) ~[?:?]
+	at java.util.Scanner.next(Scanner.java:1619) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2284) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2238) ~[?:?]
+	at com.knight.performance.AddArmorCommand.execute(Command.java:27) [classes/:?]
+	at com.knight.performance.Menu.run(Menu.java:54) [classes/:?]
+	at com.knight.performance.Main.main(Main.java:22) [classes/:?]
+2024-11-06 12:16:26 [main] INFO  com.knight.performance.AddArmorCommand - Executing AddArmorCommand
+2024-11-06 12:16:28 [main] FATAL com.knight.performance.AddArmorCommand - Critical error: Non-numeric input entered instead of a number
+java.util.InputMismatchException: null
+	at java.util.Scanner.throwFor(Scanner.java:964) ~[?:?]
+	at java.util.Scanner.next(Scanner.java:1619) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2284) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2238) ~[?:?]
+	at com.knight.performance.AddArmorCommand.execute(Command.java:27) [classes/:?]
+	at com.knight.performance.Menu.run(Menu.java:54) [classes/:?]
+	at com.knight.performance.Main.main(Main.java:22) [classes/:?]
+2024-11-06 12:36:55 [main] INFO  com.knight.performance.AddArmorCommand - Executing AddArmorCommand
+2024-11-06 12:36:56 [main] FATAL com.knight.performance.AddArmorCommand - Critical error: Non-numeric input entered instead of a number
+java.util.InputMismatchException: null
+	at java.util.Scanner.throwFor(Scanner.java:964) ~[?:?]
+	at java.util.Scanner.next(Scanner.java:1619) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2284) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2238) ~[?:?]
+	at com.knight.performance.AddArmorCommand.execute(Command.java:27) [classes/:?]
+	at com.knight.performance.Menu.run(Menu.java:54) [classes/:?]
+	at com.knight.performance.Main.main(Main.java:22) [classes/:?]
